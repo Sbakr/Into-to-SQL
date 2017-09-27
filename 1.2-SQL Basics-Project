@@ -1,0 +1,19 @@
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, item TEXT, colour TEXT, price INTEGER, quantity INTEGER);
+INSERT INTO clothing_store VALUES (1, "Long Sleeve", "Purple", 15, 35);
+INSERT INTO clothing_store VALUES (2, "Long Sleeve", "Green", 16, 20);
+INSERT INTO clothing_store VALUES (3, "Dress", "Red", 20, 10);
+INSERT INTO clothing_store VALUES (4, "Dress", "Orange", 21, 7);
+INSERT INTO clothing_store VALUES (5, "Pants", "Blue", 30, 40);
+INSERT INTO clothing_store VALUES (6, "Hat", "White", 10, 30);
+INSERT INTO clothing_store VALUES (7, "Short Sleeve", "Black", 7, 18);
+INSERT INTO clothing_store VALUES (8, "Short Sleeve", "Yellow", 8, 28);
+INSERT INTO clothing_store VALUES (9, "Socks", "Rainbow", 4, 26);
+INSERT INTO clothing_store VALUES (10, "Rain Jacket", "Grey", 17, 3);
+
+SELECT * FROM clothing_store;
+
+SELECT * FROM clothing_store GROUP BY price;
+
+SELECT * FROM clothing_store WHERE quantity>15;
+
+SELECT SUM (quantity) FROM clothing_store;
