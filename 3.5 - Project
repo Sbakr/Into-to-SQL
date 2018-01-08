@@ -1,0 +1,50 @@
+/* Create table about the people and what they do here */
+
+CREATE TABLE persons (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER);
+    
+INSERT INTO persons (fullname, age) VALUES ("Emma Watson", "27");
+INSERT INTO persons (fullname, age) VALUES ("Rachel McAdams", "39");
+INSERT INTO persons (fullname, age) VALUES ("Amanda Seyfried", "32");
+INSERT INTO persons (fullname, age) VALUES ("Emma Stone", "29");
+INSERT INTO persons (fullname, age) VALUES ("Ryan Gosling", "37");
+INSERT INTO persons (fullname, age) VALUES ("Blake Lively", "30");
+INSERT INTO persons (fullname, age) VALUES ("Scarlett Johansson", "33");
+INSERT INTO persons (fullname, age) VALUES ("Channing Tatum", "37");
+INSERT INTO persons (fullname, age) VALUES ("Dave Franco", "32");
+INSERT INTO persons (fullname, age) VALUES ("Leonardo Dicaprio", "43");
+INSERT INTO persons (fullname, age) VALUES ("Margot Robbie", "27");
+INSERT INTO persons (fullname, age) VALUES ("Cara Delevigne", "25");
+INSERT INTO persons (fullname, age) VALUES ("Will Smith", "49");
+INSERT INTO persons (fullname, age) VALUES ("Ryan Reynolds", "41");
+INSERT INTO persons (fullname, age) VALUES ("Sandra Bullock", "53");
+
+CREATE table movies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    person_id INTEGER,
+    name TEXT);
+    
+INSERT INTO movies (person_id, name) VALUES (1, "Harry Potter");
+INSERT INTO movies (person_id, name) VALUES (2, "The Notebook");
+INSERT INTO movies (person_id, name) VALUES (2, "Mean Girls");
+INSERT INTO movies (person_id, name) VALUES (3, "Mean Girls");
+INSERT INTO movies (person_id, name) VALUES (3, "Dear John");
+INSERT INTO movies (person_id, name) VALUES (4, "Crazy Stupid Love");
+INSERT INTO movies (person_id, name) VALUES (5, "The Notebook");
+INSERT INTO movies (person_id, name) VALUES (5, "Crazy Stupid Love");
+INSERT INTO movies (person_id, name) VALUES (6, "The Shallows");
+INSERT INTO movies (person_id, name) VALUES (7, "Lucy");
+INSERT INTO movies (person_id, name) VALUES (8, "Dear John");
+INSERT INTO movies (person_id, name) VALUES (8, "21 Jump Street");
+INSERT INTO movies (person_id, name) VALUES (9, "21 Jump Street");
+INSERT INTO movies (person_id, name) VALUES (10, "Wolf of Wallstreet");
+INSERT INTO movies (person_id, name) VALUES (11, "Wolf of Wallstreet");
+INSERT INTO movies (person_id, name) VALUES (12, "Suicide Squad");
+INSERT INTO movies (person_id, name) VALUES (13, "Suiside Squad");
+
+SELECT persons.fullname, movies.name
+FROM persons
+LEFT OUTER JOIN movies
+ON persons.id = movies.person_id;
