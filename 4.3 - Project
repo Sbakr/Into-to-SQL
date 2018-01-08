@@ -1,0 +1,30 @@
+/* What does the app's SQL look like? */
+
+CREATE TABLE instagram_settings (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT,
+    fullname TEXT,
+    password TEXT,
+    email TEXT,
+    followers INTEGER, 
+    following INTEGER
+    );
+    
+    INSERT INTO instagram_settings (username, fullname, password, email, followers, following)
+    VALUES ("doraexplor3r", "Dora Explora", "Swipper_no_Swipe123", "doraworld@sypatico.ca", 45, 123);
+    
+    INSERT INTO instagram_settings (username, fullname, password, email, followers, following)
+    VALUES ("Bob.builds2009", "Bob Builder", "Lasldwl24!", "bob.builder@worker.ca", 13000, 1);
+    
+    INSERT INTO instagram_settings (username, fullname, password, email, followers, following)
+    VALUES ("ClownFish48", "Nemo Clownfish", "IVETOUCHEDABUTT", "nemo.fish@waterworks.ca", 37, 36);
+    
+    ALTER TABLE instagram_settings ADD bio TEXT DEFAULT " ";
+    
+    UPDATE instagram_settings SET bio = "hey im nemo and I love swimming with all my friends" WHERE id = 3;
+    
+SELECT * FROM instagram_settings;
+
+    DELETE FROM instagram_settings WHERE id = 2;
+    
+SELECT * FROM instagram_settings;
